@@ -1,0 +1,32 @@
+@import 'setup';
+
+
+// font-family: 'Poppins', sans-serif;
+
+// STRIPPING & GLOBAL STYLES
+
+h1,
+h2,
+h3,
+p,
+span,
+ul,
+li,
+div,
+section {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    max-width: 100%; 
+}
