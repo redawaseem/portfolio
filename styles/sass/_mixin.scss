@@ -1,0 +1,60 @@
+// font-family: 'Poppins', sans-serif;
+
+$black: #2C2C2C;
+$red: #d20c0c;
+$lightgrey: #f8f9fa;
+$darkgrey: #dee2e6;
+
+@mixin mainTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem; 
+    color: $black; 
+    font-weight: 600; 
+    // letter-spacing: 2px; 
+    text-transform: uppercase;
+}
+
+@mixin secondTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem; 
+    color: $black; 
+    font-weight: 500; 
+    // letter-spacing: 2px; 
+}
+
+@mixin thirdTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem; 
+    color: $black; 
+    font-weight: 500; 
+    // letter-spacing: 2px; 
+}
+
+@mixin sixthTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem; 
+    color: $black; 
+    font-weight: 500; 
+    // letter-spacing: 2px; 
+}
+
+@mixin body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px; 
+    color: $black; 
+    font-weight: 300; 
+}
+
+@mixin button {
+    background-color: $red;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 40px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0px 5px;
+}

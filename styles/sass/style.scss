@@ -1,13 +1,20 @@
 @import 'setup';
-
-
-// font-family: 'Poppins', sans-serif;
+@import 'mixin';
+@import 'header';
+@import 'aboutMe';
+@import 'projects';
+@import 'expertise';
+@import 'contact';
+@import 'footer';
 
 // STRIPPING & GLOBAL STYLES
 
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
 span,
 ul,

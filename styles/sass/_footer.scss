@@ -1,0 +1,6 @@
+footer {
+    background-color: $lightgrey;
+    text-align: center;
+    @include body;
+    padding: 15px 0px;
+}

@@ -12,39 +12,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
+    <header id="home">
         <div class="wrapper">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Expertise</li>
-                    <li>Contact</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <img src="" alt="Circle icon with an image of Reda">
-            <h4>Welcome!</h4>
-            <h1>My name is Reda Waseem</h1>
-            <div>
-                <button>Hire Me</button>
-                <button>Learn More</button>
+            <div class="landingInfo">
+                <img class="circle" src="./assets/profile.jpg" alt="Circle icon with an image of Reda">
+                <h4>Hi there!</h4>
+                <h1>I'm Reda Waseem</h1>
+                <div class="buttons">
+                    <button>Hire Me</button>
+                    <button>Learn More</button>
+                </div>
             </div>
+        </div>
+        <div class="shapes">
+            <img class="shapeOne" src="./assets/shapeOne.svg" alt="Shape One">
+            <img class="shapeTwo" src="./assets/shapeTwo.svg" alt="Shape Two">
+            <img class="shapeThree" src="./assets/shapeThree.svg" alt="Shape Three">
+            <img class="shapeFour" src="./assets/shapeFour.svg" alt="Shape Four">
+            <img class="shapeFive" src="./assets/shapeFive.svg" alt="Shape Five">
+            <img class="shapeSix" src="./assets/shapeSix.svg" alt="Shape Six">
+            <img class="shapeSeven" src="./assets/shapeSeven.svg" alt="Shape Seven">
+            <img class="shapeEight" src="./assets/shapeEight.svg" alt="Shape Eight">
+            <img class="shapeNine" src="./assets/shapeNine.svg" alt="Shape Nine">
         </div>
     </header>
 
-    <section class="aboutMe">
+    <section class="aboutMe" id="aboutMe">
         <div class="wrapper flexContainer">
             <div class="childContainer">
-                <img src="" alt="Headshot image of Reda">
+                <img src="./assets/bigProfile.jpg" alt="Headshot image of Reda">
             </div>
             <div class="secondChildContainer">
                 <h2>About Me</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque, reprehenderit nesciunt magni expedita quia.</p>
                 <div class="grandChildContainer">
-                    <ul>
-                        <li><i class="fab fa-github"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
+                    <ul class="aboutMeIcons">
+                        <li><a href="https://github.com/redawaseem"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/reda-waseem/"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
                 <div class="secondGrandChildContainer">
@@ -55,7 +68,7 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="wrapper">
             <div class="sectionTitle">
                 <span>Take a look at</span>
@@ -74,8 +87,10 @@
                     <span>HTML5</span>
                     <span>CSS3</span>
                     <span>Sass</span>
-                    <button>View Live</button>
-                    <button>GitHub</button>
+                    <div>
+                        <button class="workButtons">View Live</button>
+                        <button class="workButtons">GitHub</button>
+                    </div>
                 </div>
             </div>
 
@@ -89,8 +104,10 @@
                     <span>HTML5</span>
                     <span>CSS3</span>
                     <span>Sass</span>
-                    <button>View Live</button>
-                    <button>GitHub</button>
+                    <div>
+                        <button class="workButtons">View Live</button>
+                        <button class="workButtons">GitHub</button>
+                    </div>
                 </div>
                 <div class="sixthChildContainer">
                     <img src="./assets/projectSix.png" alt="Project Six">
@@ -99,22 +116,22 @@
         </div>
     </section>
 
-    <section class="expertise">
+    <section class="expertise" id="expertise">
         <div class="wrapper">
-            <div class="skillsContainer">
+            <div class="skillsSection">
                 <div class="heading">
                     <h4>My Skills</h4>
                 </div>
                 <div class="icons">
                     <ul>
-                        <li><i class="fab fa-html5"></i></li>
-                        <li><i class="fab fa-css3-alt"></i></li>
-                        <li><i class="fab fa-js-square"></i></li>
-                        <li><img src="./assets/jquery.png" alt="jQuery Icon"></li>
+                        <li><img src="./assets/html.png" alt="HTML5 Icon"></li>
+                        <li><img src="./assets/css.png" alt="CSS3 Icon"></li>
+                        <li><img src="./assets/javascript.png" alt="JavaScript Icon"></li>
                         <li><img src="./assets/firebase.png" alt="Firebase Icon"></li>
-                        <li><i class="fab fa-react"></i></li>
-                        <li><i class="fab fa-sass"></i></li>
-                        <li><i class="fab fa-git-square"></i></li>
+                        <li><img src="./assets/jquery.png" alt="jQuery Icon"></li>
+                        <li><img src="./assets/react.png" alt="React Icon"></li>
+                        <li><img src="./assets/sass.png" alt="Sass Icon"></li>
+                        <li><img src="./assets/git.png" alt="Git Icon"></li>
                         <li><img src="./assets/microsoftOffice.png" alt="Microsoft Suite Icon"></li>
                         <li><img src="./assets/adobeIllustrator.png" alt="Adobe Illustrator Icon"></li>
                         <li><img src="./assets/microsoftActiveDirectory.png" alt="Microsoft Active Directory Icon"></li>
@@ -128,48 +145,48 @@
                 </div>
                 <div class="box">
                     <div class="experience">
-                        <div>
+                        <!-- <div> -->
                             <div>
-                                <p>TD Canada Trust</p>
+                                <h6>TD Canada Trust</h6>
                             </div>
-                            <div>
+                            <div class="information">
                                 <h5>Customer Experience Associate</h5>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
                             </div>
                             <div>
-                                DEC 2019 - AUG 2020
+                                <h6 class="date">DEC 2019 - AUG 2020</h6>
                             </div>
                         </div>
+                    <!-- </div> -->
+
+                    <div class="experience">
+                        <!-- <div> -->
+                            <div>
+                                <h6>TD Canada Trust</h6>
+                            </div>
+                            <div class="information">
+                                <h5>Customer Experience Associate</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
+                            </div>
+                            <div>
+                                <h6 class="date">DEC 2019 - AUG 2020</h6>
+                            </div>
+                        <!-- </div> -->
                     </div>
 
                     <div class="experience">
-                        <div>
+                        <!-- <div> -->
                             <div>
-                                <p>TD Canada Trust</p>
+                                <h6>TD Canada Trust</h6>
                             </div>
-                            <div>
+                            <div class="information">
                                 <h5>Customer Experience Associate</h5>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
                             </div>
                             <div>
-                                DEC 2019 - AUG 2020
+                                <h6 class="date">DEC 2019 - AUG 2020</h6>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="experience">
-                        <div>
-                            <div>
-                                <p>TD Canada Trust</p>
-                            </div>
-                            <div>
-                                <h5>Customer Experience Associate</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                            <div>
-                                DEC 2019 - AUG 2020
-                            </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -180,75 +197,88 @@
                 </div>
                 <div class="box">
                     <div class="education">
-                        <div>
+                        <!-- <div> -->
                             <div>
                                 <h5>Immersive Web Development</h5>
-                                <h6>Juno College of Technology</h6>
+                                <p>Juno College of Technology</p>
                             </div>
-                            <div>
-                                AUG 2020 - OCT 2020
+                            <div class="educationDate">
+                                <h6>AUG 2020 - OCT 2020</h6>
                             </div>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
 
                     <div class="education">
-                        <div>
+                        <!-- <div> -->
                             <div>
                                 <h5>Immersive Web Development</h5>
-                                <h6>Juno College of Technology</h6>
+                                <p>Juno College of Technology</p>
                             </div>
-                            <div>
-                                AUG 2020 - OCT 2020
+                            <div class="educationDate">
+                                <h6>AUG 2020 - OCT 2020</h6>
                             </div>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
 
                     <div class="education">
-                        <div>
+                        <!-- <div> -->
                             <div>
                                 <h5>Immersive Web Development</h5>
-                                <h6>Juno College of Technology</h6>
+                                <p>Juno College of Technology</p>
                             </div>
-                            <div>
-                                AUG 2020 - OCT 2020
+                            <div class="educationDate">
+                                <h6>AUG 2020 - OCT 2020</h6>
                             </div>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
                             </div>
-                        </div>
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="education">
+                        <!-- <div> -->
+                            <div>
+                                <h5>Immersive Web Development</h5>
+                                <p>Juno College of Technology</p>
+                            </div>
+                            <div class="educationDate">
+                                <h6>AUG 2020 - OCT 2020</h6>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
+                            </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="wrapper">
             <div class="sectionTitle">
                 <span>Say Hello</span>
                 <h3>Contact</h3>
             </div>
             <div>
-                <div>
-                    <h4>Get in Touch</h4>
+                <h4>Get in Touch</h4>
+            </div>
+            <div class="boxTwo">
+                <div class="phone">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>(647) 460-6214</p>
+                    <p>Call Me Maybe</p>
                 </div>
-                <div class="boxTwo">
-                    <div>
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>(647) 460-6214</p>
-                        <p>Call Me Maybe</p>
-                    </div>
-                    <div>
-                        <i class="far fa-envelope"></i>
-                        <p>redawaseem10@gmail.com</p>
-                        <p>Email Me Maybe</p>
-                    </div>
+                <div class="email">
+                    <i class="far fa-envelope"></i>
+                    <p>redawaseem10@gmail.com</p>
+                    <p>Email Me Maybe</p>
                 </div>
             </div>
             <div>
@@ -258,16 +288,16 @@
                 <div>
                     <form>
                         <fieldset>
-                            <label for="Name" class="visuallyHidden">Name</label>
-                            <input type="text" name="Name" id="Name" placeholder="Name">
+                            <!-- <label for="Name" class="visuallyHidden"></label> -->
+                            <input type="text" name="Name" id="Name" placeholder="Name*">
 
-                            <label for="email" class="visuallyHidden">Email</label>
-                            <input type="email" placeholder="Email address" id="email">
+                            <!-- <label for="email" class="visuallyHidden"></label> -->
+                            <input type="email" placeholder="Email address*" id="email">
                         </fieldset>
 
                         <textarea name="Message" id="Message" placeholder="Your message..."></textarea>
                         
-                        <button type="submit">Send</button>
+                        <button class="contactButton" type="submit">Send</button>
                     </form>
                 </div>
             </div>

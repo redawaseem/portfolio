@@ -1,0 +1,116 @@
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    li {
+        display: inline-block;
+        @include sixthTitle;
+        padding: 20px;
+        a {
+            z-index: 100;
+            position: relative;
+            color: $black;
+        }
+    }
+}
+
+.landingInfo {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    h4 {
+        @include thirdTitle;
+        margin: 20px 0px 15px 0px;
+    }
+
+    h1 {
+        @include mainTitle;
+        margin-bottom: 15px;
+    }
+}
+
+button {
+    @include button;
+    position: relative;
+    z-index: 2;
+}
+
+button:hover,
+button:active {
+    // box-shadow: 3px 3px black;
+    // background-color: rgb(255, 101, 101);
+    background-color: rebeccapurple;
+    transition: 0.5s;
+}
+
+img.circle {
+    width: 16%; 
+    border-radius: 50%;
+    // box-shadow: 10px 0px $red;
+    // display: block;
+    // margin: auto;
+    // position: relative;
+    // top: 110px;
+}
+
+.shapes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .shapeOne {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+    .shapeTwo {
+        position: absolute;
+        top: 12%;
+        left: 35%;
+    }
+
+    .shapeThree {
+        position: absolute;
+        top: 85%;
+        left: 25%;
+    }
+    
+    .shapeFour {
+        position: absolute;
+        top: 80%;
+        left: 90%;
+    }
+    
+    .shapeFive {
+        position: absolute;
+        top: 60%;
+        left: 7%;
+    }
+    
+    .shapeSix {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+    }
+    
+    .shapeSeven {
+        position: absolute;
+        top: 7%;
+        left: 90%;
+    }
+    
+    .shapeEight {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+    }
+    
+    .shapeNine {
+        position: absolute;
+        top: 17%;
+        left: 60%;
+    }
+}

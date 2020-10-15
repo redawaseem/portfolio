@@ -1,0 +1,107 @@
+// .sectionTitle {
+//     position: relative;
+//     span::before {
+//         position: absolute;
+//         content: "";
+//         width: 50px;
+//         height: 1px;
+//         background: $black;
+//         top: 20px;
+//     }
+//     span {
+//         @include thirdTitle;
+//         display: block;
+//         padding-left: 80px;
+//         position: relative;
+//     }
+//     span::after {
+//         position: absolute;
+//         content: "";
+//         top: 200px;
+//     }
+// }
+
+.sectionTitle {
+    margin-top: 50px;
+    span {
+        @include body;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    h3 {
+        @include thirdTitle;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 10px 0px 50px 0px;
+    }
+}
+
+.flexContainerTwo {
+    display: flex;
+    .thirdChildContainer {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .fourthChildContainer {
+        width: 40%;
+        margin: auto;
+        h4 {
+            @include thirdTitle;
+            margin-bottom: 10px;
+        }
+
+        p {
+            @include body;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        span {
+            @include body;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: 1px solid $darkgrey;
+            padding: 0px 5px;
+            line-height: 30px;
+            background-color: $lightgrey;
+        }
+    }
+}
+
+.workButtons {
+    margin-top: 10px;
+}
+
+.flexContainerThree {
+    display: flex;
+    margin: 80px 0px;
+    .fifthChildContainer {
+        width: 40%;
+        margin: auto;
+        h4 {
+            @include thirdTitle;
+            margin-bottom: 10px;
+        }
+    
+        p {
+            @include body;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+    
+        span {
+            @include body;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: 1px solid $darkgrey;
+            padding: 0px 5px;
+            line-height: 30px;
+            background-color: $lightgrey;
+        }
+    }
+
+    .sixthChildContainer {
+        width: 40%;
+        margin: 0 auto;
+    }
+}

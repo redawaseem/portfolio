@@ -1,0 +1,48 @@
+.flexContainer {
+    display: flex;
+    margin: 0 auto;
+    height: 80vh;
+    // background-color: papayawhip;
+    .childContainer {
+        width: 40%;
+        margin: auto;
+    }
+    .secondChildContainer {
+        width: 40%;
+        margin: auto;
+        h2 {
+            @include secondTitle;
+            margin: 0px 0px 30px 0px;
+        }
+        p {
+            @include body;
+            line-height: 30px;
+        }
+    }
+}
+
+.grandChildContainer {
+    ul {
+        justify-content: flex-start;
+        li {
+            padding: 0px 20px 0px 0px;
+            margin: 30px 0px;
+            a {
+                display: block;
+                text-align: center;
+                border: 1px solid $darkgrey;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                // line-height: 40px;
+                padding-top: 8px;
+
+            }
+        }
+    }
+}
+
+
+.aboutMe {
+    background-color: $lightgrey;
+}
