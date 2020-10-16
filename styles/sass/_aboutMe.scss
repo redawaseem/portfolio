@@ -1,13 +1,11 @@
 .aboutMe {
     background-color: $lightgrey;
     padding: 80px 0px;
-    // height: 100vh;
 }
 
 .flexContainer {
     display: flex;
     margin: 0 auto;
-    // height: 100vh;
     .childContainer {
         width: 40%;
         margin: auto;

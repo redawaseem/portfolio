@@ -39,6 +39,8 @@ img {
     max-width: 100%; 
 }
 
+// GLOBAL LIST STYLES 
+
 ul {
     list-style: none;
     display: flex;
@@ -54,6 +56,8 @@ ul {
         }
     }
 }
+
+//GLOBAL BUTTON STYLES
 
 button {
     @include button;
