@@ -228,72 +228,133 @@ html {
   overflow: hidden;
 }
 
-ul {
-  list-style: none;
+.navBar {
+  position: fixed;
+  left: 0px;
+  height: 100vh;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  width: 25%;
   display: flex;
-  justify-content: flex-end;
+  padding: 0px 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 900;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
 }
 
-ul li {
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: #2C2C2C;
-  font-weight: 500;
-  padding: 20px;
+.navBar li {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
-ul li a {
-  z-index: 100;
-  position: relative;
-  color: #2C2C2C;
+.navBar li.hover:hover {
+  background-color: #f8f9fa;
+  width: 80%;
+  text-align: center;
 }
 
-.landingInfo {
+.navBar a {
+  text-decoration: none;
+  padding: 20px 38px;
+}
+
+.navBar h1 {
+  text-align: center;
+}
+
+.fa-bars {
+  font-size: 25px;
+}
+
+.burgerMenu {
+  z-index: 1000;
+  position: fixed;
+  left: 90%;
+  top: 5%;
+  cursor: pointer;
+  background-color: #d20c0c;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.burgerMenu div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.navBar-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.landingPageInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
-.landingInfo h4 {
+.landingPageInfo h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #2C2C2C;
   font-weight: 500;
-  margin: 20px 0px 15px 0px;
+  margin-top: 20px;
+  text-transform: uppercase;
 }
 
-.landingInfo h1 {
+.landingPageInfo h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 4rem;
   color: #2C2C2C;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 15px;
 }
 
-button {
-  background-color: #d20c0c;
+.landingPageInfo h3 {
   font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #2C2C2C;
   font-weight: 500;
-  padding: 10px 20px;
-  color: white;
-  cursor: pointer;
-  border-style: none;
-  border-radius: 40px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  margin: 0px 5px;
-  position: relative;
-  z-index: 2;
+  color: #d20c0c;
+  text-transform: uppercase;
 }
 
-button:hover,
-button:active {
-  background-color: rebeccapurple;
-  transition: 0.5s;
+.landingPageInfo p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #2C2C2C;
+  font-weight: 300;
 }
 
 img.circle {
@@ -307,6 +368,7 @@ img.circle {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 
 .shapes .shapeOne {
@@ -335,19 +397,19 @@ img.circle {
 
 .shapes .shapeFive {
   position: absolute;
-  top: 60%;
-  left: 7%;
-}
-
-.shapes .shapeSix {
-  position: absolute;
   top: 50%;
   left: 70%;
 }
 
+.shapes .shapeSix {
+  position: absolute;
+  top: 60%;
+  left: 7%;
+}
+
 .shapes .shapeSeven {
   position: absolute;
-  top: 7%;
+  top: 28%;
   left: 90%;
 }
 
@@ -361,6 +423,40 @@ img.circle {
   position: absolute;
   top: 17%;
   left: 60%;
+}
+
+.learnMore {
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+.learnMore .fa-chevron-down {
+  color: #2C2C2C;
+  font-size: 50px;
+  position: relative;
+  top: 25px;
+}
+
+.bounce {
+  animation: bounce 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-12px);
+  }
 }
 
 .flexContainer {
@@ -489,6 +585,11 @@ img.circle {
   margin-top: 10px;
 }
 
+.workButtons a {
+  text-decoration: none;
+  color: white;
+}
+
 .flexContainerThree {
   display: flex;
   margin: 80px 0px;
@@ -557,15 +658,25 @@ img.circle {
 
 .icons ul {
   flex-wrap: wrap;
-  width: 60%;
+  width: 68%;
   margin: 0 auto;
-  align-items: center;
 }
 
 .icons ul li {
-  width: 16%;
+  width: 15%;
   margin: 10px auto;
   padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.icons ul p {
+  color: #d20c0c;
+  text-align: center;
+  font-size: 15px;
+  height: 20px;
 }
 
 .experienceContainer {
@@ -590,11 +701,6 @@ img.circle {
   padding: 20px;
 }
 
-.experience:hover {
-  transform: scale(1.1);
-  transition: transform 330ms ease-in-out;
-}
-
 .experience h5 {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -616,6 +722,11 @@ img.circle {
   font-size: 12px;
   color: #2C2C2C;
   font-weight: 500;
+}
+
+.experience:hover {
+  transform: scale(1.03);
+  transition: transform 500ms ease-in-out;
 }
 
 .information {
@@ -680,7 +791,7 @@ img.circle {
   border-radius: 5px;
 }
 
-.educationDate {
+.education .educationDate {
   width: max-content;
 }
 
@@ -704,6 +815,7 @@ img.circle {
   width: 48%;
   text-align: center;
   margin-bottom: 50px;
+  padding: 25px;
 }
 
 .boxTwo .phone i,
@@ -721,7 +833,18 @@ img.circle {
   line-height: 30px;
 }
 
-fieldset {
+.boxTwo .phone h6,
+.boxTwo .email h6 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #2C2C2C;
+  font-weight: 300;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form fieldset {
   border: none;
   padding: 0;
   margin: 0 auto;
@@ -729,11 +852,11 @@ fieldset {
   justify-content: space-between;
 }
 
-fieldset label {
-  border: none;
+form fieldset label {
+  display: none;
 }
 
-fieldset input {
+form fieldset input {
   width: 48%;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -741,9 +864,10 @@ fieldset input {
   font-weight: 300;
   padding: 5px 0px 5px 15px;
   margin-bottom: 30px;
+  border: 1px solid #dee2e6;
 }
 
-textarea {
+form textarea {
   width: 100%;
   height: 200px;
   resize: none;
@@ -752,13 +876,22 @@ textarea {
   color: #2C2C2C;
   font-weight: 300;
   padding: 10px 0px 10px 15px;
+  border: 1px solid #dee2e6;
 }
 
-.contactButton {
-  display: block;
+form .send {
+  background-color: #d20c0c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 40px;
+  font-size: 12px;
+  letter-spacing: 1px;
   margin: 30px auto;
-  text-transform: uppercase;
-  width: 10%;
+  display: block;
 }
 
 footer {
@@ -794,8 +927,54 @@ section {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 img {
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul li {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #2C2C2C;
+  font-weight: 500;
+  padding: 20px;
+}
+
+ul li a {
+  z-index: 100;
+  position: relative;
+  color: #2C2C2C;
+}
+
+button {
+  background-color: #d20c0c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 40px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0px 5px;
+  position: relative;
+  z-index: 2;
+}
+
+button:hover,
+button:active,
+.send:hover,
+.send:active {
+  background-color: rebeccapurple;
+  transition: 0.5s;
 }

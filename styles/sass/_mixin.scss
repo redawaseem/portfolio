@@ -1,7 +1,7 @@
-// font-family: 'Poppins', sans-serif;
-
 $black: #2C2C2C;
 $red: #d20c0c;
+// $red: #CF5C5D;
+$purple: #926FCD;
 $lightgrey: #f8f9fa;
 $darkgrey: #dee2e6;
 
@@ -9,8 +9,7 @@ $darkgrey: #dee2e6;
     font-family: 'Poppins', sans-serif;
     font-size: 4rem; 
     color: $black; 
-    font-weight: 600; 
-    // letter-spacing: 2px; 
+    font-weight: 700; 
     text-transform: uppercase;
 }
 
@@ -19,7 +18,6 @@ $darkgrey: #dee2e6;
     font-size: 4rem; 
     color: $black; 
     font-weight: 500; 
-    // letter-spacing: 2px; 
 }
 
 @mixin thirdTitle {
@@ -27,7 +25,6 @@ $darkgrey: #dee2e6;
     font-size: 3rem; 
     color: $black; 
     font-weight: 500; 
-    // letter-spacing: 2px; 
 }
 
 @mixin sixthTitle {
@@ -35,7 +32,6 @@ $darkgrey: #dee2e6;
     font-size: 2rem; 
     color: $black; 
     font-weight: 500; 
-    // letter-spacing: 2px; 
 }
 
 @mixin body {

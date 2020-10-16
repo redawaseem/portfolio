@@ -1,58 +1,120 @@
-ul {
-    list-style: none;
+.navBar {
+    position: fixed;
+    left: 0px;
+    height: 100vh;
+    background-color: white;
+    border: 1px solid $darkgrey;
+    width: 25%;
     display: flex;
-    justify-content: flex-end;
+    padding: 0px 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 900;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
     li {
-        display: inline-block;
-        @include sixthTitle;
-        padding: 20px;
-        a {
-            z-index: 100;
-            position: relative;
-            color: $black;
-        }
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    li.hover:hover {
+        background-color: $lightgrey;
+        width: 80%;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 20px 38px;
+    }
+
+    h1 {
+        text-align: center;
     }
 }
 
-.landingInfo {
+.fa-bars {
+    font-size: 25px;
+}
+
+.burgerMenu {
+    z-index: 1000;
+    position: fixed;
+    left: 90%;
+    top: 5%;
+    cursor: pointer;
+    background-color: $red;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.burgerMenu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.navBar-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.landingPageInfo {
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    h4 {
-        @include thirdTitle;
-        margin: 20px 0px 15px 0px;
+    height: 100vh;
+    h2 {
+        @include sixthTitle;
+        margin-top: 20px;
+        text-transform: uppercase;
     }
 
     h1 {
         @include mainTitle;
-        margin-bottom: 15px;
     }
-}
-
-button {
-    @include button;
-    position: relative;
-    z-index: 2;
-}
-
-button:hover,
-button:active {
-    // box-shadow: 3px 3px black;
-    // background-color: rgb(255, 101, 101);
-    background-color: rebeccapurple;
-    transition: 0.5s;
+    
+    h3 {
+        @include sixthTitle;
+        color: $red;
+        text-transform: uppercase;
+    }
+    
+    p {
+        @include body;
+    }
 }
 
 img.circle {
     width: 16%; 
     border-radius: 50%;
-    // box-shadow: 10px 0px $red;
-    // display: block;
-    // margin: auto;
-    // position: relative;
-    // top: 110px;
 }
 
 .shapes {
@@ -61,6 +123,7 @@ img.circle {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: -1;
     .shapeOne {
         position: absolute;
         top: 10%;
@@ -86,19 +149,19 @@ img.circle {
     
     .shapeFive {
         position: absolute;
-        top: 60%;
-        left: 7%;
-    }
-    
-    .shapeSix {
-        position: absolute;
         top: 50%;
         left: 70%;
     }
     
+    .shapeSix {
+        position: absolute;
+        top: 60%;
+        left: 7%;
+    }
+    
     .shapeSeven {
         position: absolute;
-        top: 7%;
+        top: 28%;
         left: 90%;
     }
     
@@ -113,4 +176,61 @@ img.circle {
         top: 17%;
         left: 60%;
     }
+}
+
+.learnMore {
+    text-align: center;
+    position: relative;
+    top: 10%;
+    .fa-chevron-down {
+        color: $black;
+        font-size: 50px;
+        position: relative;
+        top: 25px;
+      }
+}
+
+.bounce {
+	-webkit-animation: bounce 2s;
+	        animation: bounce 2s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+	}
+}
+
+@keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+	}
 }

@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reda Waseem</title>
+    <!-- LINK TO FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <!-- LINK TO STYLESHEET -->
     <link rel="stylesheet" href="./styles/styles/style.css">
     <!-- LINK TO FONTAWESOME -->
@@ -12,24 +20,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
 <body>
+
+    <!-- HEADER -->
     <header id="home">
         <div class="wrapper">
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutMe">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#expertise">Expertise</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="navBar">
+                    <li><h1>REDA</h1></li>
+                    <li class="hover"><a href="#home">Home</a></li>
+                    <li class="hover"><a href="#aboutMe">About</a></li>
+                    <li class="hover"><a href="#projects">Projects</a></li>
+                    <li class="hover"><a href="#expertise">Expertise</a></li>
+                    <li class="hover"><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="burgerMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </nav>
-            <div class="landingInfo">
+            <div class="landingPageInfo">
                 <img class="circle" src="./assets/profile.jpg" alt="Circle icon with an image of Reda">
-                <h4>Hi there!</h4>
+                <h2>Hi there!</h2>
                 <h1>I'm Reda Waseem</h1>
-                <div class="buttons">
-                    <button>Hire Me</button>
-                    <button>Learn More</button>
+                <h3>A Front-End Developer</h3>
+                <div class="learnMore">
+                    <p>Scroll Down to Learn More!</p>
+                    <i class="bounce fas fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -46,6 +63,7 @@
         </div>
     </header>
 
+    <!-- ABOUT ME SECTION -->
     <section class="aboutMe" id="aboutMe">
         <div class="wrapper flexContainer">
             <div class="childContainer">
@@ -53,7 +71,7 @@
             </div>
             <div class="secondChildContainer">
                 <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque, reprehenderit nesciunt magni expedita quia.</p>
+                <p>Hi, my name is Reda Waseem (pronounced as Red-a; like the colour!) and I'm a Front-End Developer with a unique blend of business acumen and passion for implementing creative accessible websites. When I'm not in the process of debugging code, you can find me holding a cup of Tims coffee at home while hanging out with my family.</p>
                 <div class="grandChildContainer">
                     <ul class="aboutMeIcons">
                         <li><a href="https://github.com/redawaseem"><i class="fab fa-github"></i></a></li>
@@ -68,6 +86,7 @@
         </div>
     </section>
 
+    <!-- WORK SECTION -->
     <section class="projects" id="projects">
         <div class="wrapper">
             <div class="sectionTitle">
@@ -80,7 +99,7 @@
                 </div>
                 <div class="fourthChildContainer">
                     <h4>MusicApp</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quos accusamus error sit? Omnis, sit.</p>
+                    <p>Have a favourite song that you want to share with the World? Tell us about it in this interactive app!</p>
                     <span>Firebase</span>
                     <span>React</span>
                     <span>JavaScript</span>
@@ -88,8 +107,8 @@
                     <span>CSS3</span>
                     <span>Sass</span>
                     <div>
-                        <button class="workButtons">View Live</button>
-                        <button class="workButtons">GitHub</button>
+                        <button class="workButtons"><a href="https://redawaseem.github.io/musicApp/">View Live</a></button>
+                        <button class="workButtons"><a href="https://github.com/redawaseem/musicApp">Github</a></button>
                     </div>
                 </div>
             </div>
@@ -97,7 +116,7 @@
             <div class="flexContainerThree">
                 <div class="fifthChildContainer">
                     <h4>Podcast Planner</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quos accusamus error sit? Omnis, sit.</p>
+                    <p>Struggling to create a podcast playlist for your next journey? No fear, Podcast Planner is here! Select podcasts from a range of genres and track your list with the provided time-counter!</p>
                     <span>Firebase</span>
                     <span>React</span>
                     <span>JavaScript</span>
@@ -105,8 +124,8 @@
                     <span>CSS3</span>
                     <span>Sass</span>
                     <div>
-                        <button class="workButtons">View Live</button>
-                        <button class="workButtons">GitHub</button>
+                        <button class="workButtons"><a href="https://podcast-palz.github.io/podcast-planner/">View Live</a></button>
+                        <button class="workButtons"><a href="https://github.com/podcast-palz/podcast-planner">Github</a></button>
                     </div>
                 </div>
                 <div class="sixthChildContainer">
@@ -116,6 +135,7 @@
         </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section class="expertise" id="expertise">
         <div class="wrapper">
             <div class="skillsSection">
@@ -124,142 +144,132 @@
                 </div>
                 <div class="icons">
                     <ul>
-                        <li><img src="./assets/html.png" alt="HTML5 Icon"></li>
-                        <li><img src="./assets/css.png" alt="CSS3 Icon"></li>
-                        <li><img src="./assets/javascript.png" alt="JavaScript Icon"></li>
-                        <li><img src="./assets/firebase.png" alt="Firebase Icon"></li>
-                        <li><img src="./assets/jquery.png" alt="jQuery Icon"></li>
-                        <li><img src="./assets/react.png" alt="React Icon"></li>
-                        <li><img src="./assets/sass.png" alt="Sass Icon"></li>
-                        <li><img src="./assets/git.png" alt="Git Icon"></li>
-                        <li><img src="./assets/microsoftOffice.png" alt="Microsoft Suite Icon"></li>
-                        <li><img src="./assets/adobeIllustrator.png" alt="Adobe Illustrator Icon"></li>
-                        <li><img src="./assets/microsoftActiveDirectory.png" alt="Microsoft Active Directory Icon"></li>
+                        <li><img src="./assets/html.png" alt="HTML5 Icon"><p>HTML5</p></li>
+                        <li><img src="./assets/css.png" alt="CSS3 Icon"><p>CSS3</p></li>
+                        <li><img src="./assets/javascript.png" alt="JavaScript Icon"><p>JavaScript</p></li>
+                        <li><img src="./assets/firebase.png" alt="Firebase Icon"><p>Firebase</p></li>
+                        <li><img src="./assets/jquery.png" alt="jQuery Icon"><p>jQuery</p></li>
+                        <li><img src="./assets/react.png" alt="React Icon"><p>React</p></li>
+                        <li><img src="./assets/sass.png" alt="Sass Icon"><p>SASS</p></li>
+                        <li><img src="./assets/git.png" alt="Git Icon"><p>Git</p></li>
+                        <li><img src="./assets/microsoftOffice.png" alt="Microsoft Suite Icon"><p>Microsoft Suite</p></li>
+                        <li><img src="./assets/adobeIllustrator.png" alt="Adobe Illustrator Icon"><p>Adobe Illustrator</p></li>
+                        <li><img src="./assets/microsoftActiveDirectory.png" alt="Microsoft Active Directory Icon"><p>Microsoft Active Directory</p></li>
                     </ul>
                 </div>
             </div>
 
+            <!-- EXPERIENCE CONTAINER -->
             <div class="experienceContainer">
                 <div class="heading">
                     <h4>My Experience</h4>
                 </div>
                 <div class="box">
                     <div class="experience">
-                        <!-- <div> -->
-                            <div>
-                                <h6>TD Canada Trust</h6>
-                            </div>
-                            <div class="information">
-                                <h5>Customer Experience Associate</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                            <div>
-                                <h6 class="date">DEC 2019 - AUG 2020</h6>
-                            </div>
+                        <div>
+                            <h6>TD Canada Trust</h6>
                         </div>
-                    <!-- </div> -->
-
-                    <div class="experience">
-                        <!-- <div> -->
-                            <div>
-                                <h6>TD Canada Trust</h6>
-                            </div>
-                            <div class="information">
-                                <h5>Customer Experience Associate</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                            <div>
-                                <h6 class="date">DEC 2019 - AUG 2020</h6>
-                            </div>
-                        <!-- </div> -->
+                        <div class="information">
+                            <h5>Customer Experience Associate</h5>
+                            <p>Leveraged strong financial knowledge and provided exceptional client
+                            support while completing transactions with a result of exceeding the expected target pace per quarter, with an all-time high of 275%. </p>
+                        </div>
+                        <div>
+                            <h6 class="date">DEC 2019 - AUG 2020</h6>
+                        </div>
                     </div>
 
                     <div class="experience">
-                        <!-- <div> -->
-                            <div>
-                                <h6>TD Canada Trust</h6>
-                            </div>
-                            <div class="information">
-                                <h5>Customer Experience Associate</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                            <div>
-                                <h6 class="date">DEC 2019 - AUG 2020</h6>
-                            </div>
-                        <!-- </div> -->
+                        <div>
+                            <h6>Mosaic Sales Solutions</h6>
+                        </div>
+                        <div class="information">
+                            <h5>Brand Ambassador</h5>
+                            <p>Successfully increased client revenue through product sampling in store. Demonstrated enthusiastic public relations and provided support for high-profile clients such as Facebook and Shopify.</p>
+                        </div>
+                        <div>
+                            <h6 class="date">MAY 2017 - AUG 2019</h6>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <div>
+                            <h6>Plan Hoot Incorporated</h6>
+                        </div>
+                        <div class="information">
+                            <h5>Associate & Accounting Clerk Intern</h5>
+                            <p>Responded to corporate needs by assessing the market to create innovative digital content with the use of graphic skills. Assisted with performing bank reconciliations on Excel to ensure uniformity and that records were maintained to the highest level of professional standard.</p>
+                        </div>
+                        <div>
+                            <h6 class="date">MAY 2017 - AUG 2018</h6>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- EDUCATION CONTAINER -->
             <div class="educationContainer">
                 <div class="heading">
                     <h4>My Education</h4>
                 </div>
                 <div class="box">
                     <div class="education">
-                        <!-- <div> -->
-                            <div>
-                                <h5>Immersive Web Development</h5>
-                                <p>Juno College of Technology</p>
-                            </div>
-                            <div class="educationDate">
-                                <h6>AUG 2020 - OCT 2020</h6>
-                            </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                        <!-- </div> -->
+                        <div>
+                            <h5>Immersive Web Development</h5>
+                            <p>Juno College of Technology</p>
+                        </div>
+                        <div class="educationDate">
+                            <h6>AUG 2020 - OCT 2020</h6>
+                        </div>
+                        <div>
+                            <p>A 9-week intensive hands-on front-end development learning program.</p>
+                        </div>
                     </div>
 
                     <div class="education">
-                        <!-- <div> -->
-                            <div>
-                                <h5>Immersive Web Development</h5>
-                                <p>Juno College of Technology</p>
-                            </div>
-                            <div class="educationDate">
-                                <h6>AUG 2020 - OCT 2020</h6>
-                            </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                        <!-- </div> -->
+                        <div>
+                            <h5>Accelerated Web Development</h5>
+                            <p>Juno College of Technology</p>
+                        </div>
+                        <div class="educationDate">
+                            <h6>MAY 2020 - JUN 2020</h6>
+                        </div>
+                        <div>
+                            <p>An accelerated 2-week introduction to web development course.</p>
+                        </div>
                     </div>
 
                     <div class="education">
-                        <!-- <div> -->
-                            <div>
-                                <h5>Immersive Web Development</h5>
-                                <p>Juno College of Technology</p>
-                            </div>
-                            <div class="educationDate">
-                                <h6>AUG 2020 - OCT 2020</h6>
-                            </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                        <!-- </div> -->
+                        <div>
+                            <h5>Microsoft Active Directory</h5>
+                            <p>NetSoft College of Technology</p>
+                        </div>
+                        <div class="educationDate">
+                            <h6>NOV 2019 - FEB 2020</h6>
+                        </div>
+                        <div>
+                            <p>A course which provides the foundational building blocks required to manage and support Microsoft Active Directory.</p>
+                        </div>
                     </div>
 
                     <div class="education">
-                        <!-- <div> -->
-                            <div>
-                                <h5>Immersive Web Development</h5>
-                                <p>Juno College of Technology</p>
-                            </div>
-                            <div class="educationDate">
-                                <h6>AUG 2020 - OCT 2020</h6>
-                            </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque.</p>
-                            </div>
-                        <!-- </div> -->
+                        <div>
+                            <h5>Bachelor of Business Administration</h5>
+                            <p>Wilfrid Laurier University</p>
+                        </div>
+                        <div class="educationDate">
+                            <h6>SEPT 2015 - APR 2019</h6>
+                        </div>
+                        <div>
+                            <p>Graduated with Honours from the BBA Program as an Accounting Major.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="wrapper">
             <div class="sectionTitle">
@@ -272,13 +282,13 @@
             <div class="boxTwo">
                 <div class="phone">
                     <i class="fas fa-mobile-alt"></i>
-                    <p>(647) 460-6214</p>
-                    <p>Call Me Maybe</p>
+                    <a href="tel:6474606214"><p>(647) 460-6214</p></a>
+                    <h6>Phone</h6>
                 </div>
                 <div class="email">
                     <i class="far fa-envelope"></i>
-                    <p>redawaseem10@gmail.com</p>
-                    <p>Email Me Maybe</p>
+                    <a href="mailto:redawaseem10@gmail.com"><p>redawaseem10@gmail.com</p></a>
+                    <h6>Email</h6>
                 </div>
             </div>
             <div>
@@ -286,28 +296,31 @@
                     <h4>Contact Form</h4>
                 </div>
                 <div>
-                    <form>
+                    <form action="http://www.focuspocus.io/magic/redawaseem10@gmail.com" 
+                    method="POST">
                         <fieldset>
-                            <!-- <label for="Name" class="visuallyHidden"></label> -->
+                            <label for="Name" class="visuallyHidden"></label>
                             <input type="text" name="Name" id="Name" placeholder="Name*">
 
-                            <!-- <label for="email" class="visuallyHidden"></label> -->
-                            <input type="email" placeholder="Email address*" id="email">
+                            <label for="email" class="visuallyHidden"></label>
+                            <input type="email" name="Email" placeholder="Email address*" id="email">
                         </fieldset>
-
                         <textarea name="Message" id="Message" placeholder="Your message..."></textarea>
-                        
-                        <button class="contactButton" type="submit">Send</button>
+                        <input class="send" type="submit" value="Send">
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="wrapper">
             <span><i class="far fa-copyright"></i> 2020 Reda Waseem</span>
         </div>
     </footer>
+
+    <!-- LINK TO JS FILE -->
+    <script src="script/app.js"></script>
 </body>
 </html>

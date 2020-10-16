@@ -32,8 +32,39 @@ section {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 img {
     max-width: 100%; 
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    li {
+        display: inline-block;
+        @include sixthTitle;
+        padding: 20px;
+        a {
+            z-index: 100;
+            position: relative;
+            color: $black;
+        }
+    }
+}
+
+button {
+    @include button;
+    position: relative;
+    z-index: 2;
+}
+
+button:hover,
+button:active,
+.send:hover,
+.send:active {
+    background-color: rebeccapurple;
+    transition: 0.5s;
 }
