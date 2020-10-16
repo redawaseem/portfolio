@@ -75,3 +75,32 @@ form {
     }
 }
 
+@media (max-width: 768px) {
+    .boxTwo {
+        flex-direction: column;
+        align-items: center;
+        .phone,
+        .email {
+            width: 70%;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    form {
+        fieldset {
+            flex-direction: column;
+            align-items: center;
+            // max-width: 100%;
+            input {
+                width: 70%;
+            }
+        }
+        textarea {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

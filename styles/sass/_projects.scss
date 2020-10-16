@@ -13,13 +13,16 @@
     }
 }
 
-.flexContainerTwo {
+.flexContainerTwo,
+.flexContainerThree {
     display: flex;
-    .thirdChildContainer {
+    .thirdChildContainer,
+    .fifthChildContainer {
         width: 40%;
         margin: 0 auto;
     }
-    .fourthChildContainer {
+    .fourthChildContainer,
+    .sixthChildContainer {
         width: 40%;
         margin: auto;
         h4 {
@@ -41,6 +44,10 @@
             background-color: $lightgrey;
         }
     }
+}
+
+.flexContainerThree {
+    margin: 100px 0px;
 }
 
 .workButtons {
@@ -51,33 +58,25 @@
     }
 }
 
-.flexContainerThree {
-    display: flex;
-    margin: 80px 0px;
-    .fifthChildContainer {
-        width: 40%;
-        margin: auto;
-        h4 {
-            @include thirdTitle;
-            margin-bottom: 10px;
+@media (max-width: 768px) {
+    .sectionTitle {
+        text-align: center;
+    }
+    .flexContainerTwo,
+    .flexContainerThree {
+        flex-direction: column;
+        text-align: center;
+        .thirdChildContainer,
+        .fifthChildContainer {
+            width: 70%;
         }
-        p {
-            @include body;
-            line-height: 30px;
-            margin-bottom: 10px;
-        }
-        span {
-            @include body;
-            font-weight: 500;
-            text-transform: uppercase;
-            border: 1px solid $darkgrey;
-            padding: 0px 5px;
-            line-height: 30px;
-            background-color: $lightgrey;
+        .fourthChildContainer,
+        .sixthChildContainer {
+            width: 70%;
+            h4 {
+                margin-top: 30px;
+            }
         }
     }
-    .sixthChildContainer {
-        width: 40%;
-        margin: 0 auto;
-    }
+
 }

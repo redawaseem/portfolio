@@ -1,3 +1,7 @@
+header {
+    height: 100vh;
+}
+
 .navBar {
     position: fixed;
     left: 0px;
@@ -19,7 +23,8 @@
         letter-spacing: 2px;
     }
 
-    li.hover:hover {
+    li.hover:hover,
+    li.hover:active {
         background-color: $lightgrey;
         width: 80%;
         text-align: center;
@@ -27,7 +32,7 @@
 
     a {
         text-decoration: none;
-        padding: 20px 38px;
+        // padding: 20px 38px;
     }
 
     h1 {
@@ -233,4 +238,49 @@ img.circle {
 		-webkit-transform: translateY(-12px);
 		        transform: translateY(-12px);
 	}
+}
+
+@media (max-width: 960px) {
+    .shapes {
+        .shapeFive {
+            left: 80%;
+        }
+        .shapeEight {
+            top: 40%;
+            left: 20%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 90vh;
+    }
+
+    .navBar {
+        width: 40%;
+    }
+
+    .burgerMenu {
+        left: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        width: 50%;
+    }
+}
+
+@media (max-width: 375px) {
+    .burgerMenu {
+        left: 77%;
+    }
+    .navBar {
+        width: 70%;
+    }
+
+    h1 {
+        text-align: center;
+    }
 }

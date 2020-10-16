@@ -228,6 +228,10 @@ html {
   overflow: hidden;
 }
 
+header {
+  height: 100vh;
+}
+
 .navBar {
   position: fixed;
   left: 0px;
@@ -251,7 +255,8 @@ html {
   letter-spacing: 2px;
 }
 
-.navBar li.hover:hover {
+.navBar li.hover:hover,
+.navBar li.hover:active {
   background-color: #f8f9fa;
   width: 80%;
   text-align: center;
@@ -259,7 +264,6 @@ html {
 
 .navBar a {
   text-decoration: none;
-  padding: 20px 38px;
 }
 
 .navBar h1 {
@@ -459,10 +463,54 @@ img.circle {
   }
 }
 
+@media (max-width: 960px) {
+  .shapes .shapeFive {
+    left: 80%;
+  }
+  .shapes .shapeEight {
+    top: 40%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 90vh;
+  }
+  .navBar {
+    width: 40%;
+  }
+  .burgerMenu {
+    left: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .burgerMenu {
+    left: 77%;
+  }
+  .navBar {
+    width: 70%;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+.aboutMe {
+  background-color: #f8f9fa;
+  padding: 80px 0px;
+}
+
 .flexContainer {
   display: flex;
   margin: 0 auto;
-  height: 80vh;
 }
 
 .flexContainer .childContainer {
@@ -510,8 +558,34 @@ img.circle {
   padding-top: 8px;
 }
 
-.aboutMe {
-  background-color: #f8f9fa;
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 80px 0px;
+  }
+  .flexContainer {
+    flex-direction: column;
+  }
+  .flexContainer .childContainer {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .flexContainer .secondChildContainer {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .flexContainer .secondChildContainer h2 {
+    font-size: 3rem;
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+  .flexContainer .secondChildContainer p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .grandChildContainer ul {
+    justify-content: center;
+  }
 }
 
 .sectionTitle {
@@ -537,21 +611,31 @@ img.circle {
   margin: 10px 0px 50px 0px;
 }
 
-.flexContainerTwo {
+.flexContainerTwo,
+.flexContainerThree {
   display: flex;
 }
 
-.flexContainerTwo .thirdChildContainer {
+.flexContainerTwo .thirdChildContainer,
+.flexContainerTwo .fifthChildContainer,
+.flexContainerThree .thirdChildContainer,
+.flexContainerThree .fifthChildContainer {
   width: 40%;
   margin: 0 auto;
 }
 
-.flexContainerTwo .fourthChildContainer {
+.flexContainerTwo .fourthChildContainer,
+.flexContainerTwo .sixthChildContainer,
+.flexContainerThree .fourthChildContainer,
+.flexContainerThree .sixthChildContainer {
   width: 40%;
   margin: auto;
 }
 
-.flexContainerTwo .fourthChildContainer h4 {
+.flexContainerTwo .fourthChildContainer h4,
+.flexContainerTwo .sixthChildContainer h4,
+.flexContainerThree .fourthChildContainer h4,
+.flexContainerThree .sixthChildContainer h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   color: #2C2C2C;
@@ -559,7 +643,10 @@ img.circle {
   margin-bottom: 10px;
 }
 
-.flexContainerTwo .fourthChildContainer p {
+.flexContainerTwo .fourthChildContainer p,
+.flexContainerTwo .sixthChildContainer p,
+.flexContainerThree .fourthChildContainer p,
+.flexContainerThree .sixthChildContainer p {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: #2C2C2C;
@@ -568,7 +655,10 @@ img.circle {
   margin-bottom: 10px;
 }
 
-.flexContainerTwo .fourthChildContainer span {
+.flexContainerTwo .fourthChildContainer span,
+.flexContainerTwo .sixthChildContainer span,
+.flexContainerThree .fourthChildContainer span,
+.flexContainerThree .sixthChildContainer span {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: #2C2C2C;
@@ -579,6 +669,10 @@ img.circle {
   padding: 0px 5px;
   line-height: 30px;
   background-color: #f8f9fa;
+}
+
+.flexContainerThree {
+  margin: 100px 0px;
 }
 
 .workButtons {
@@ -590,49 +684,33 @@ img.circle {
   color: white;
 }
 
-.flexContainerThree {
-  display: flex;
-  margin: 80px 0px;
-}
-
-.flexContainerThree .fifthChildContainer {
-  width: 40%;
-  margin: auto;
-}
-
-.flexContainerThree .fifthChildContainer h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
-  color: #2C2C2C;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.flexContainerThree .fifthChildContainer p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  color: #2C2C2C;
-  font-weight: 300;
-  line-height: 30px;
-  margin-bottom: 10px;
-}
-
-.flexContainerThree .fifthChildContainer span {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  color: #2C2C2C;
-  font-weight: 300;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 1px solid #dee2e6;
-  padding: 0px 5px;
-  line-height: 30px;
-  background-color: #f8f9fa;
-}
-
-.flexContainerThree .sixthChildContainer {
-  width: 40%;
-  margin: 0 auto;
+@media (max-width: 768px) {
+  .sectionTitle {
+    text-align: center;
+  }
+  .flexContainerTwo,
+  .flexContainerThree {
+    flex-direction: column;
+    text-align: center;
+  }
+  .flexContainerTwo .thirdChildContainer,
+  .flexContainerTwo .fifthChildContainer,
+  .flexContainerThree .thirdChildContainer,
+  .flexContainerThree .fifthChildContainer {
+    width: 70%;
+  }
+  .flexContainerTwo .fourthChildContainer,
+  .flexContainerTwo .sixthChildContainer,
+  .flexContainerThree .fourthChildContainer,
+  .flexContainerThree .sixthChildContainer {
+    width: 70%;
+  }
+  .flexContainerTwo .fourthChildContainer h4,
+  .flexContainerTwo .sixthChildContainer h4,
+  .flexContainerThree .fourthChildContainer h4,
+  .flexContainerThree .sixthChildContainer h4 {
+    margin-top: 30px;
+  }
 }
 
 .expertise {
@@ -795,6 +873,61 @@ img.circle {
   width: max-content;
 }
 
+@media (max-width: 768px) {
+  h4 {
+    text-align: center;
+  }
+  .icons ul li {
+    width: 22%;
+  }
+  .information {
+    width: 80%;
+  }
+  .experienceContainer,
+  .educationContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experienceContainer .heading,
+  .educationContainer .heading {
+    width: 100%;
+  }
+  .experienceContainer .box,
+  .educationContainer .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experienceContainer .box .experience,
+  .experienceContainer .box .education,
+  .educationContainer .box .experience,
+  .educationContainer .box .education {
+    flex-direction: column;
+    text-align: center;
+  }
+  .educationContainer .box .education {
+    width: 100%;
+  }
+  .educationDate {
+    margin: 0 auto;
+  }
+  .experience h6,
+  .experience p {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons ul li {
+    width: 34%;
+  }
+}
+
+@media (max-width: 375px) {
+  .icons ul li {
+    width: 45%;
+  }
+}
+
 .wrapper h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
@@ -892,6 +1025,33 @@ form .send {
   letter-spacing: 1px;
   margin: 30px auto;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .boxTwo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxTwo .phone,
+  .boxTwo .email {
+    width: 70%;
+  }
+  .boxTwo .phone p,
+  .boxTwo .email p {
+    font-size: 14px;
+  }
+  form fieldset {
+    flex-direction: column;
+    align-items: center;
+  }
+  form fieldset input {
+    width: 70%;
+  }
+  form textarea {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 footer {

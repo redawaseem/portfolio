@@ -1,7 +1,13 @@
+.aboutMe {
+    background-color: $lightgrey;
+    padding: 80px 0px;
+    // height: 100vh;
+}
+
 .flexContainer {
     display: flex;
     margin: 0 auto;
-    height: 80vh;
+    // height: 100vh;
     .childContainer {
         width: 40%;
         margin: auto;
@@ -40,7 +46,35 @@
     }
 }
 
+@media (max-width: 768px) {
+    .aboutMe {
+        padding: 80px 0px;
+    }
+    .flexContainer {
+        flex-direction: column;
+        .childContainer {
+            width: 30%;
+            margin: 0 auto;
+        }
+        .secondChildContainer {
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            h2 {
+                font-size: 3rem;
+                padding-top: 10px;
+                margin-bottom: 5px;
+            }
+             p {
+                 font-size: 14px;
+                 line-height: 30px;
+             }
+        }
+    }
 
-.aboutMe {
-    background-color: $lightgrey;
+    .grandChildContainer {
+        ul {
+            justify-content: center;
+        }
+    }
 }
