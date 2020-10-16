@@ -255,15 +255,14 @@ header {
   letter-spacing: 2px;
 }
 
-.navBar li.hover:hover,
-.navBar li.hover:active {
-  background-color: #f8f9fa;
-  width: 80%;
-  text-align: center;
-}
-
 .navBar a {
   text-decoration: none;
+  padding: 20px 75px;
+}
+
+.navBar a:hover,
+.navBar a:active {
+  background-color: #f8f9fa;
 }
 
 .navBar h1 {
@@ -471,6 +470,9 @@ img.circle {
     top: 40%;
     left: 20%;
   }
+  .navBar {
+    width: 40%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -479,6 +481,9 @@ img.circle {
   }
   .navBar {
     width: 40%;
+  }
+  .navBar a {
+    padding: 20px 40px;
   }
   .burgerMenu {
     left: 85%;
@@ -802,13 +807,17 @@ img.circle {
   font-weight: 500;
 }
 
+.experience .companyName {
+  width: 20%;
+}
+
+.experience .information {
+  width: 50%;
+}
+
 .experience:hover {
   transform: scale(1.03);
   transition: transform 500ms ease-in-out;
-}
-
-.information {
-  width: 50%;
 }
 
 .date {
@@ -880,9 +889,6 @@ img.circle {
   .icons ul li {
     width: 22%;
   }
-  .information {
-    width: 80%;
-  }
   .experienceContainer,
   .educationContainer {
     flex-direction: column;
@@ -904,15 +910,21 @@ img.circle {
     flex-direction: column;
     text-align: center;
   }
+  .experience .companyName {
+    width: 80%;
+  }
+  .experience .information {
+    width: 80%;
+  }
+  .experience h6,
+  .experience p {
+    margin-bottom: 10px;
+  }
   .educationContainer .box .education {
     width: 100%;
   }
   .educationDate {
     margin: 0 auto;
-  }
-  .experience h6,
-  .experience p {
-    margin-bottom: 10px;
   }
 }
 

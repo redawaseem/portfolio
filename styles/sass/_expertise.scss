@@ -80,6 +80,14 @@
         color: $black; 
         font-weight: 500; 
     }
+
+    .companyName {
+        width: 20%;
+    }
+
+    .information {
+        width: 50%;
+    }
 }
 
 .experience:hover {
@@ -87,9 +95,6 @@
     transition: transform 500ms ease-in-out;
 }
 
-.information {
-    width: 50%;
-}
 
 .date {
     background-color: $darkgrey;
@@ -161,9 +166,6 @@
             }
         }
     }
-    .information {
-        width: 80%;
-    }
 
     .experienceContainer,
     .educationContainer {
@@ -183,6 +185,19 @@
         }
     }
 
+    .experience {
+        .companyName {
+            width: 80%;
+        }
+        .information {
+            width: 80%;
+        }
+        h6,
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
     .educationContainer {
         .box {
             .education {
@@ -193,13 +208,6 @@
 
     .educationDate {
         margin: 0 auto;
-    }
-
-    .experience {
-        h6,
-        p {
-            margin-bottom: 10px;
-        }
     }
 }
 
