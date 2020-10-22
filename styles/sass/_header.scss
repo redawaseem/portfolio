@@ -50,7 +50,7 @@ header {
     cursor: pointer;
     background-color: $red;
     border-radius: 50%;
-    padding: 10px;
+    padding: 10px 8px;
 }
 
 .burgerMenu div {
@@ -275,6 +275,35 @@ img.circle {
     .navBar {
         width: 50%;
     }
+
+    .shapes {
+        .shapeTwo {
+            top: 5%;
+        }
+        
+        .shapeThree {
+            top: 80%;
+        }
+    
+        .shapeFive {
+            top: 60%;
+            left: 70%;
+        }
+
+        .shapeEight {
+            top: 34%;
+        }
+
+        .shapeSeven {
+            left: 84%;
+        }
+
+        .shapeNine {
+            top: 22%;
+        }
+        
+        
+    }
 }
 
 @media (max-width: 375px) {
@@ -287,5 +316,15 @@ img.circle {
 
     h1 {
         text-align: center;
+    }
+
+    .landingPageInfo {
+        img.circle {
+            display: none;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
     }
 }

@@ -44,6 +44,15 @@
     }
 }
 
+.secondGrandChildContainer { 
+    button {
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .aboutMe {
         padding: 80px 0px;
@@ -51,7 +60,7 @@
     .flexContainer {
         flex-direction: column;
         .childContainer {
-            width: 30%;
+            width: 80%;
             margin: 0 auto;
         }
         .secondChildContainer {
@@ -63,10 +72,10 @@
                 padding-top: 10px;
                 margin-bottom: 5px;
             }
-             p {
-                 font-size: 14px;
-                 line-height: 30px;
-             }
+            p {
+                font-size: 14px;
+                line-height: 30px;
+            }
         }
     }
 

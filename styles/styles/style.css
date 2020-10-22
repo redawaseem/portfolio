@@ -281,7 +281,7 @@ header {
   cursor: pointer;
   background-color: #d20c0c;
   border-radius: 50%;
-  padding: 10px;
+  padding: 10px 8px;
 }
 
 .burgerMenu div {
@@ -494,6 +494,25 @@ img.circle {
   .navBar {
     width: 50%;
   }
+  .shapes .shapeTwo {
+    top: 5%;
+  }
+  .shapes .shapeThree {
+    top: 80%;
+  }
+  .shapes .shapeFive {
+    top: 60%;
+    left: 70%;
+  }
+  .shapes .shapeEight {
+    top: 34%;
+  }
+  .shapes .shapeSeven {
+    left: 84%;
+  }
+  .shapes .shapeNine {
+    top: 22%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -505,6 +524,12 @@ img.circle {
   }
   h1 {
     text-align: center;
+  }
+  .landingPageInfo img.circle {
+    display: none;
+  }
+  .landingPageInfo h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -563,6 +588,11 @@ img.circle {
   padding-top: 8px;
 }
 
+.secondGrandChildContainer button a {
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .aboutMe {
     padding: 80px 0px;
@@ -571,7 +601,7 @@ img.circle {
     flex-direction: column;
   }
   .flexContainer .childContainer {
-    width: 30%;
+    width: 80%;
     margin: 0 auto;
   }
   .flexContainer .secondChildContainer {
@@ -678,6 +708,7 @@ img.circle {
 
 .flexContainerThree {
   margin: 100px 0px;
+  flex-direction: row-reverse;
 }
 
 .workButtons {
@@ -752,7 +783,12 @@ img.circle {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons ul img {
+  height: 70px;
 }
 
 .icons ul p {
@@ -1138,7 +1174,7 @@ button {
   border-radius: 40px;
   font-size: 12px;
   letter-spacing: 1px;
-  margin: 0px 5px;
+  margin-right: 5px;
   position: relative;
   z-index: 2;
 }
